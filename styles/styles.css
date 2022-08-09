@@ -1,0 +1,43 @@
+/* 
+Font:
+font-family: 'Poppins', sans-serif;
+
+Palette:
+#daac00 dark
+#fcc302 light
+#00bec9 turques
+#313243 titulos
+#343434 footer
+*/
+*{
+    scroll-behavior: smooth;
+
+}
+
+
+header {
+    background-color:#daac00;
+    min-height: 8vh
+
+}
+header a {
+    font-family:'Poppins', sans-serif;
+    font-weight: 600 !important;
+    color:aliceblue !important;
+    
+}
+
+header a:hover{
+    border: 1px solid #343434;
+    border-radius: 5px;
+    background-color :#00bec9 !important;
+    color:aliceblue !important;
+}
+
+footer {
+    background-color: #343434;
+    min-height: 20vh;
+}
+main {
+    min-height: 60vh;
+}
