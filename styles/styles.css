@@ -1,4 +1,4 @@
-/* 
+/*
 Font:
 font-family: 'Poppins', sans-serif;
 
@@ -9,35 +9,271 @@ Palette:
 #313243 titulos
 #343434 footer
 */
-*{
+/* HEADER */
+
+* {
     scroll-behavior: smooth;
 
 }
 
+#logo-h{
+    width: 30%!important;
+}
 
 header {
-    background-color:#daac00;
-    min-height: 8vh
-
-}
-header a {
-    font-family:'Poppins', sans-serif;
-    font-weight: 600 !important;
-    color:aliceblue !important;
+    background-color: #daac00;
     
 }
 
-header a:hover{
+header a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600 !important;
+    color: aliceblue !important;
+
+}
+
+header a:hover {
     border: 1px solid #343434;
     border-radius: 5px;
-    background-color :#00bec9 !important;
-    color:aliceblue !important;
+    background-color: #00bec9 !important;
+    color: aliceblue !important;
 }
+
+
+main {
+    min-height: 60vh;
+}
+
+
+/* MAIN */
+
+/* boton img */
+
+#botones-img {
+    border-bottom:2px 2px black!important ;
+}
+
+
+/* Clientes Felices */
+
+#cF-h2 {
+    font-size: 2.5rem !important;
+    color: #313243!important;
+}
+
+/* START STYLES PRODUCTS */
+
+.imgItems{
+    width: 15rem;
+  }
+  
+  .container-ver-mas{
+    background-color:#daac00;
+  }
+  .btn-ver-mas{
+    background-color:#00bec9 ;
+  }
+  
+  .btn-ver-mas a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+  }
+  .a-ver:hover{
+    color: #343434;
+    font-weight: 600;
+  }
+  
+  @media (max-width:768px){
+    #div-items{
+      display: none !important;
+    }
+    .container-ver-mas{
+      display: none !important;
+    }
+  }
+  /* END STYLES PRODUCTS */
+
+  /* QUIENES SOMOS */
+  .card {
+    text-align: justify !important;
+}
+  /* QUIENES SOMOS */
+
+/* INDEX MARQUEE */
+
+
+#carousel-cf {
+    --space: 2rem;
+
+    display: grid;
+    align-content: center;
+    overflow: hidden;
+    gap: var(--space);
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.marquee {
+    --duration: 100s;
+    --gap: var(--space);
+
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+
+}
+
+.marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee__group {
+        animation-play-state: paused;
+    }
+}
+
+.marquee__group img {
+    max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.marquee__group h1 {
+    background-color: rgba(0, 0, 0, 0.357);
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.marquee--borders {
+    border-block: 3px solid rgb(104, 106, 108);
+    padding-block: 0.75rem;
+}
+
+.marquee--reverse .marquee__group {
+    animation-direction: reverse;
+    animation-delay: calc(var(--duration) / -2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+
+/* TARJETAS INDEX QUIENES SOMOS Y DONDE */
+
+  /* GOOGLE-MAP EFFECT */
+
+      /* Circle Width */
+
+      .google-map {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: var(--circle-diameter);
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: #eee;
+        transition: 5000ms;
+        cursor: grab;
+    }
+    
+    
+    .google-map .map-frame {
+        width: 20vw;
+        height: 20vh;
+        background-color: var(--light-theme);
+    }
+    
+    .google-map iframe {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        pointer-events: visibleStroke;
+    }
+    
+    
+
+/* FOOTER */
 
 footer {
     background-color: #343434;
     min-height: 20vh;
 }
-main {
-    min-height: 60vh;
+
+#footer-logo {
+    width: 100%!important;
+}
+
+.container-f-2{
+    font-family:'Poppins', sans-serif;
+    font-size: small;
+    color:aliceblue !important;
+}
+
+.container-f-2 h5{
+    font-family:'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 600 !important;
+    color:aliceblue !important;
+}
+
+.caja-cupon{
+    background-color: #daac00;
+    color: #313243;
+    font-weight: 600 !important;
+}
+
+.btn-cupon{
+    background-color: #00bec9;
+}
+.btn-cupon:hover{
+    background-color: #313243;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 600px) {
+    #botones-img {
+        display: none!important;
+    }
+
+}
+
+@media screen and (max-width:700px){
+    .container-f{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-f{
+        width: 60% !important;
+        height: 60% !important;
+        margin-right: 0 !important; 
+        display: flex;
+        justify-content: center;
+    }
+    #nav{
+        display: inline!important;
+    }
+
 }
