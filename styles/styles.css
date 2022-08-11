@@ -17,7 +17,7 @@ Palette:
 }
 
 #logo-h{
-    width: 30%!important;
+    width: 15%!important;
 }
 
 header {
@@ -68,7 +68,7 @@ main {
   }
   
   .container-ver-mas{
-    background-color:#daac00;
+    background-color:#fcc302;
   }
   .btn-ver-mas{
     background-color:#00bec9 ;
@@ -83,11 +83,46 @@ main {
     color: #343434;
     font-weight: 600;
   }
-  
+  .card-padre{
+    width: 18rem;
+    height: 18rem;
+    background-color: white !important;
+    border: 1px solid grey;
+}
+.card-padre:hover{
+    transform: scale(1.02);
+}
+
+.card-padre img{
+    width: 10rem;
+}
+
+.card-padre a{
+    text-decoration: none;
+}
+
+#card-container p{
+    font-family: 'Poppins', sans-serif !important;
+    font-size: small;
+    font-weight: 600;
+    color: #313243;
+}
+
+.cardOfertas{
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    color: aliceblue;
+    background-color: #daac00;
+}
+
+.cardOfertas p{
+    text-align: center;
+}
+
   @media (max-width:768px){
-    #div-items{
+    /* #cardContainer{
       display: none !important;
-    }
+    } */
     .container-ver-mas{
       display: none !important;
     }
@@ -237,7 +272,7 @@ footer {
 }
 
 .caja-cupon{
-    background-color: #daac00;
+    background-color:#fcc302;
     color: #313243;
     font-weight: 600 !important;
 }
@@ -277,3 +312,117 @@ footer {
     }
 
 }
+
+/* ESTILO CONTACTO */
+.section-heading {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .section-heading::before {
+    z-index: -1;
+    display: block;
+    visibility: hidden;
+    content: "";
+  }
+  
+  .section-heading::before {
+    height: 4rem;
+    margin-top: -4rem;
+  }
+  
+  .btn-yellow {
+    color: black;
+    background-color: #fcc302 !important;
+  }
+  .btn-yellow:hover {
+    color: black;
+    background-color: #fcc302;
+  }
+  .btn-yellow:focus,
+  .btn-yellow.focus {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+  .btn-yellow:focus,
+  .btn-yellow:active,
+  .btn-yellow.active {
+    background-color: #fcc302;
+  }
+  .btn-floating {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 50px;
+    height: 50px;
+  }
+  .btn-floating i {
+    font-size: 1.25rem;
+    line-height: 47px;
+  }
+  .btn-floating i {
+    display: inline-block;
+    width: inherit;
+    color: #fff;
+    text-align: center;
+  }
+  .btn-floating:hover {
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .btn-floating:before {
+    border-radius: 0;
+  }
+  .bg-yellow {
+    background-color: #fcc302;
+  }
+  
+  .bg-h-yellow {
+    background-color: #daac00;
+  }
+  
+  .icon {
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .form-header {
+    color: black;
+    padding: 1rem;
+    margin-top: -3.13rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-radius: 0.125rem;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+  
+  .form-header > h3 {
+    margin: 0;
+  }
+  
+  .header-icon {
+    height: 50px;
+    width: 50px;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+  /* FIN ESTILO CONTACTO */
