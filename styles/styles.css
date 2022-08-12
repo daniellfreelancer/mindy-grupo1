@@ -426,3 +426,12 @@ footer {
   }
 
   /* FIN ESTILO CONTACTO */
+
+  .tablaCarrito{
+    display: none;
+}
+
+#papa-ofertas{
+  display: flex !important;
+  display: inline;
+}
