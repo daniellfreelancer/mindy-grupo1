@@ -7,9 +7,8 @@ async function petshopDetail() {
     const mindyApi = await fetch("https://apipetshop.herokuapp.com/api/articulos");
     let myData = await mindyApi.json()
     let products = myData.response
-
     let detailProduct = products.find(e => e._id === id);
-
+    
     console.log(detailProduct)
 
     function createDetails(amazing, container) {
@@ -40,8 +39,10 @@ async function petshopDetail() {
                         <p class="fs-4">1</p>
                         <button class="btn btn-info fs-4">+</button>
                     </div>
-                    <button class="btn btn-info align-self-center text-light w-50 text-center">Agregar al carrito</button>
-                </div>
+                    <button id="botonAgregar"  class="btn btn-info align-self-center text-light w-50 text-center">Agregar al carrito</button>
+                    <a  class="btn btn-success"  href="./carrito.html">Ir al Carrito</a> 
+
+                    </div>
 
             </div>
             <div class="card-footer text-muted bg-warning">
@@ -51,7 +52,47 @@ async function petshopDetail() {
             </div>`
         detailDiv.appendChild(detailCard)
     }
+
     createDetails(detailProduct, "containerDetails")
+
+    const boton = document.getElementById("botonAgregar")
+
+    boton.addEventListener("click", ()=>{
+        addMyCart(detailProduct)
+        Swal.fire( {
+            icon: 'success',
+            title: "Producto agregado con Exito!",
+        } )
+
+    })
+
+
+
+
+    function addMyCart(producto){
+        //creo en una nueva variable 
+        let newcarrito = JSON.parse(localStorage.getItem("carrito"))
+
+
+        console.log(newcarrito)
+
+        if(!localStorage.getItem("carrito")){
+
+            newcarrito = []
+        }
+        newcarrito.push(producto)
+
+        localStorage.setItem("carrito",JSON.stringify(newcarrito)) //
+    }
+
+   
+    // que hace primero
+
+
 }
 
 petshopDetail()
+//onclick="addToCart('${detailProduct.nombre}, precio:${detailProduct.precio}, stock:${detailProduct.stock}, imagen:${detailProduct.imagen } ')"
+
+const title = document.title
+console.log(title)
